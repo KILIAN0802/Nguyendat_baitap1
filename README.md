@@ -11,3 +11,9 @@ Student Info
 
 * Student Name: Nguyễn Quang Anh
 * Student ID: BA10-002
+
+
+# Practical Work Lists
+| List |           Title          |
+|:----:|:------------------------:|
+|   1  | [Student marks management](https://github.com/quanganh2001/pp2022/tree/master/student-mark-management) |
