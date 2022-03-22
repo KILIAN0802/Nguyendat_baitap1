@@ -80,3 +80,23 @@ m.mark('Kieu Khanh Huyen', 'French Language', '18.5')
 for i in range(len(student_list)):
     st.listSt(student_list[i])
 ```
+The result is:
+```txt
+Name: Nguyen Quang Anh
+Id: BA10-002
+Date Of Bird: 27 October 2001
+Mark for French Language: 12.5
+*****************
+
+Name: Tran Ngoc Bach
+Id: BA10-046
+Date Of Bird: 24 May 2001
+Mark for French Language: 11
+*****************
+
+Name: Kieu Khanh Huyen
+Id: BA10-064
+Date Of Bird: 25 December 2001
+Mark for French Language: 18.5
+*****************
+```
