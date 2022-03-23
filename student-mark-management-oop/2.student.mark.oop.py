@@ -1,79 +1,125 @@
-import weakref
-option = True
-
+students = []
+courses = []
 class Student:
-  students = []
-  def __init__(self, studentid, studentname, DoB):
-      self.studentid = studentid
-      self.studentname = studentname
-      self.DoB = DoB
-      self.__class__.students.append(self)
-  def showInfo(self):
-    for i in self.students:
-      print(i.studentid, i.studentname, i.DoB)
+  def __init__(self, student_id, studentname, studentdob):
+    self.id = student_id
+    self.name = studentname
+    self.dob = studentdob
+    self.marks = {}
+  
+  def get_id(self):
+    return self.id
+  
+  def get_name(self):
+    return self.name
+  
+  def get_dob(self):
+    return self.dob
+  
+  def get_mark(self):
+    return self.marks
+  
+  def set_id(self, _id):
+    self.id = _id
+  
+  def set_name(self, name):
+    self.name = name
+  
+  def set_dob(self, dob):
+    self.dob = dob
+  
+  def set_mark(self, course, mark):
+    self.marks.update({course: mark})
+  
+  def displayStudent(self):
+    print("Student ID: " + self.id)
+    print("Student name: " + self.name)
+    print("Student DoB: " + self.dob)
+  
+  def displayMark(self, course):
+    print(self.name + "'s mark: " + str(self.marks.get(course)))
+
 
 class Course:
-  courses = []
-  def __init__(self, courseid, coursename):
-      self.courseid = courseid
-      self.coursename = coursename
-      self.__class__.courses.append(self)
-  def showcourse(self):
-    for i in self.courses:
-      print(i.courseid, i.coursename)
+  def __init__(self, course_id, coursename):
+    self.id = course_id
+    self.name = coursename
+  
+  def get_id(self):
+    return self.id
+  
+  def get_name(self):
+    return self.name
+  
+  def set_id(self, id):
+    self.id = id
+  
+  def set_name(self, name):
+    self.name = name
+  
+  def displayCourse(self):
+    print("Course ID: " + self.id)
+    print("Course name: " + self.name)
 
-class Mark:
-  marks = []
-  def __init__(self, mark):
-      self.mark = mark
-      self.__class__.marks.append(self)
-  def showmarks(self):
-    for i in self.marks:
-      print(i.mark)
+def numOfStudent():
+    std_num = int(input("How many student in class? "))
+    return std_num
 
-while option:
-  option = input("1. Input Students\n2. Input Courses\n3. Input marks\n"
-                 "4. Show list of students\n5. Show list of courses\n6. Show marks\n7. End\n")
-  if option == '1':
-    option = True
-    numofstu = int(input('Number of students: '))
-    for num in range(0, numofstu):
-      student = Student(
-          input('Student id: '),
-          input('Student name: '),
-          input('Student DoB: ')
-      )
-  elif option == '2':
-    option = True
-    numofcourse = int(input('Number of courses: '))
-    for num in range(0, numofcourse):
-      course = Course(
-          input('Course id: '),
-          input('Coursename: '),
-      )
-  elif option == '3':
-    option = True
-    print('List of courses: ')
-    print(course.showcourse())
-    print('List of students: ')
-    print(student.showinfo())
-    mark = Mark(
-        input('Input mark(by form CourseName: Name: Mark ): ')
-    )
-  elif option == '4':
-    option = True
-    print('List of students: ')
-    print("ID | Name | DoB\n")
-    print(student.showinfo())
-  elif option == '5':
-    option = True
-    print('List of courses: ')
-    print("CourseID | Name\n")
-    print(course.showcourse())
-  elif option == '6':
-    option = True
-    print('List of marks: ')
-    print("Course | Name | Mark\n")
-    print(mark.showmarks())
-  else:
-    break
+
+def studentInfo():
+  std_id = input("Student ID: ")
+  std_name = input("Student name: ")
+  std_dob = input("Student DoB: ")
+  return std_id, std_name, std_dob
+
+def numOfCourse():
+    course_num = int(input("Number of courses: "))
+    return course_num
+
+def courseInfo():
+  course_id = input("Course ID: ")
+  course_name = input("Course name: ")
+  return course_id, course_name
+
+
+def findCourseName(courses, course_id):
+  for course in courses:
+    if course.get_id() == course_id:
+      return course.get_name()
+  print("Error: Invalid ID!")
+
+if __name__ == "__main__":
+  student_num = numOfStudent()
+  print(student_num)
+  for i in range(0, student_num):
+    id, name, dob = studentInfo()
+    students.append(Student(id, name, dob))
+  
+  course_num = numOfCourse()
+  for i in range(0, course_num):
+    id, name = courseInfo()
+    courses.append(Course(id, name))
+  
+  print("Display students information:\n")
+  for student in students:
+    student.displayStudent()
+  
+  print("Display courses information:\n")
+  for course in courses:
+    course.displayCourse()
+  
+  a = 'b'
+  while a == 'b':
+    sel_course_id = input("Select a course ID: ")
+    sel_course = findCourseName(courses, sel_course_id)
+    print("Course name: " + sel_course + "\n")
+    for student in students:
+      mark = input("Enter " + student.name + "'s mark: ")
+      student.set_mark(sel_course, mark)
+    a = input("Select another course? y/n: ")
+    print("-------")
+  sel_course_id = input("Select a displayed course ID: ")
+  sel_course = findCourseName(courses, sel_course_id)
+  print(f"Display students' marks of course {sel_course}:\n")
+  for student in students:
+    student.displayMark(sel_course)
