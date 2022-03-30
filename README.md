@@ -18,3 +18,4 @@ Student Info
 |:----:|:------------------------:|
 |   1  | [Student marks management](https://github.com/quanganh2001/pp2022/tree/master/student-mark-management) |
 | 2 | [Student mark management OOP Python](https://github.com/quanganh2001/pp2022/tree/master/student-mark-management-oop) |
+| 3 | [Student mark management (Calculate GPA)](https://github.com/quanganh2001/pp2022/tree/master/modularization) |
