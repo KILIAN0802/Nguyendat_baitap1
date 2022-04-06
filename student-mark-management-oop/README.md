@@ -432,6 +432,106 @@ class Course:
 System = System()
 System.run()
 ```
+The result is:
+```txt
+Enter the number of students: 2
+Student 1:
+Enter id of Student: BA10
+Enter name of Student: Quang Anh
+Enter DoB of Student: 27 October 2001
+Student 2:
+Enter id of Student: BA11
+Enter name of Student: Tran Ngoc Bach
+Enter DoB of Student: 26 September 2001
+Enter the number of courses: 2
+Course 1:
+Enter Course name: French
+Enter Course ID: FR2.1
+Course 2:
+Enter Course name: Algorithm
+Enter Course ID: ADS1
+==========
+Actions: 
+ (1) List Courses
+ (2) List Students
+ (3) Set Marks (given course)
+ (4) Get Marks (given course)
+ (5) Finish
+Enter the number of Action: 1
+French
+Algorithm
+==========
+Actions: 
+ (1) List Courses
+ (2) List Students
+ (3) Set Marks (given course)
+ (4) Get Marks (given course)
+ (5) Finish
+Enter the number of Action: 2
+Quang Anh
+Tran Ngoc Bach
+==========
+Actions: 
+ (1) List Courses
+ (2) List Students
+ (3) Set Marks (given course)
+ (4) Get Marks (given course)
+ (5) Finish
+Enter the number of Action: 3
+Enter course name: French
+=========
+Enter mark of Quang Anh: 12.5
+Enter mark of Tran Ngoc Bach: 11.5
+==========
+Actions: 
+ (1) List Courses
+ (2) List Students
+ (3) Set Marks (given course)
+ (4) Get Marks (given course)
+ (5) Finish
+Enter the number of Action: 3
+Enter course name: Algorithm
+=========
+Enter mark of Quang Anh: 8.75
+Enter mark of Tran Ngoc Bach: 15.75
+==========
+Actions: 
+ (1) List Courses
+ (2) List Students
+ (3) Set Marks (given course)
+ (4) Get Marks (given course)
+ (5) Finish
+Enter the number of Action: 4
+Enter course name: French
+Course: French:
+ * Id: FR2.1
+ * Marks: 
+     +   Quang Anh: 12.5
+     +   Tran Ngoc Bach: 11.5
+==========
+Actions: 
+ (1) List Courses
+ (2) List Students
+ (3) Set Marks (given course)
+ (4) Get Marks (given course)
+ (5) Finish
+Enter the number of Action: 4
+Enter course name: Algorithm
+Course: Algorithm:
+ * Id: ADS1
+ * Marks: 
+     +   Quang Anh: 8.75
+     +   Tran Ngoc Bach: 15.75
+==========
+Actions: 
+ (1) List Courses
+ (2) List Students
+ (3) Set Marks (given course)
+ (4) Get Marks (given course)
+ (5) Finish
+Enter the number of Action: 5
+Finish! Thank you!
+```
 In there:
 Fix source code due to my source code has similarity for other friends
 1. Add comments (Especially for getter and setter Class Student and Course)
