@@ -20,3 +20,4 @@ Student Info
 | 2 | [Student mark management OOP Python](https://github.com/quanganh2001/pp2022/tree/master/student-mark-management-oop) |
 | 3 | [Student mark management (Calculate GPA)](https://github.com/quanganh2001/pp2022/tree/master/modularization) |
 | 4 | [Module and Packages](https://github.com/quanganh2001/pp2022/tree/master/pw4) |
+| 5 | [Practical work 5: persistent info](https://github.com/quanganh2001/pp2022/tree/master/pw5) |
