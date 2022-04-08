@@ -1,0 +1,21 @@
+Name: Nguyen Quang Anh
+Operating System:10.5
+------------------
+French Language:13.1
+------------------
+Numerical Methods:6.5
+------------------
+Name: Nguyen Thi Khanh Huyen
+Operating System:14.0
+------------------
+French Language:16.5
+------------------
+Numerical Methods:8.0
+------------------
+Name: Nguyen Van Tai
+Operating System:19.0
+------------------
+French Language:18.0
+------------------
+Numerical Methods:18.3
+------------------
