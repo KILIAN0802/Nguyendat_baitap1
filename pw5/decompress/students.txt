@@ -1,0 +1,12 @@
+Name: Nguyen Quang Anh
+ID: BA10-002
+Date of birth: 27/10/2001
+----------------------------
+Name: Nguyen Thi Khanh Huyen
+ID: BA10-025
+Date of birth: 25/09/2001
+----------------------------
+Name: Nguyen Van Tai
+ID: BA10-055
+Date of birth: 21/04/2001
+----------------------------
