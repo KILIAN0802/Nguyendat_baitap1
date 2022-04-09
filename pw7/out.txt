@@ -1,0 +1,5 @@
+total 5
+drwxrwxrwx 1 quanganh quanganh  256 Thg 4   9 10:02 .
+drwxrwxrwx 1 quanganh quanganh 4096 Thg 4   9 10:01 ..
+-rwxrwxrwx 1 quanganh quanganh    0 Thg 4   9 10:02 out.txt
+-rwxrwxrwx 1 quanganh quanganh  394 Thg 4   9 10:00 python_shell.py
